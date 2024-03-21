@@ -1,4 +1,9 @@
+import Navbar from "@/scenes/Navbar";
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="app bg-gray-20">
+      <Navbar />
+    </div>
+  );
 }
 export default App;
