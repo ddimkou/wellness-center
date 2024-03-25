@@ -9,7 +9,6 @@ import spons2 from "@/assets/spons2.png";
 import spons3 from "@/assets/spons3.png";
 import { motion } from "framer-motion";
 
-ActionButton;
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
