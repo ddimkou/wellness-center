@@ -7,6 +7,8 @@ import eqBanner2 from "@/assets/eqBanner2.png";
 import spons1 from "@/assets/spons1.png";
 import spons2 from "@/assets/spons2.png";
 import spons3 from "@/assets/spons3.png";
+import { motion } from "framer-motion";
+
 ActionButton;
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -21,7 +23,17 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* main header */}
         <div className="z-10 mt-32 md:basis-3/5">
           {/* headings */}
-          <div className="md:-mt-20">
+          <motion.div
+            className="md:-mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <div>
               <img src={banner} alt="Wellness Center Banner" />
             </div>
@@ -33,9 +45,19 @@ const Home = ({ setSelectedPage }: Props) => {
               Wellness Center not just a retreat, but a pivotal part of your
               wellness journey.
             </p>
-          </div>
+          </motion.div>
           {/* ACTIONS */}
-          <div className="mt-8 flex items-center gap-8 ">
+          <motion.div
+            className="mt-8 flex items-center gap-8 "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <ActionButton setSelectedPage={setSelectedPage}>
               JOIN NOW
             </ActionButton>
@@ -46,11 +68,11 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               <p>Learn More</p>
             </AnchorLink>
-          </div>
+          </motion.div>
         </div>
 
         {/* image */}
-        <div className="flex basis-3/5 justify-center md:ml-40 md:mt-16 md:justify-items-end sm:mt-12">
+        <div className="flex basis-3/5 justify-center mt-12 md:ml-40 md:mt-16 md:justify-items-end ">
           <img
             src={eqBanner2}
             alt="home-pageGraphic"
