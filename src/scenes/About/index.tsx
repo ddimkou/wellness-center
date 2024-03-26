@@ -25,6 +25,12 @@ const benefits: BenefitType[] = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -34,7 +40,17 @@ const About = ({ setSelectedPage }: Props) => {
     <section id="about" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.About)}>
         {/* Header */}
-        <div className="md:my-5 md:w-3/5">
+        <motion.div
+          className="md:my-5 md:w-3/5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <HText>MORE THAN JUST A MASSAGE CENTER</HText>
           <p className="my-5 text-sm">
             Welcome to Wellness Center, where we make relaxation simple. Our
@@ -42,9 +58,15 @@ const About = ({ setSelectedPage }: Props) => {
             massages in a peaceful place. Come take a break and let us take care
             of you.
           </p>
-        </div>
+        </motion.div>
         {/* Benefits */}
-        <div className="md:flex items-center justify-between gap-8 mt-5">
+        <motion.div
+          className="md:flex items-center justify-between gap-8 mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {benefits.map((benefit: BenefitType) => (
             <Benefit
               key={benefit.title}
@@ -54,7 +76,7 @@ const About = ({ setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
