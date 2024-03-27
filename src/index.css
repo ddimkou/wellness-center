@@ -13,3 +13,20 @@ body,
   font-family: "DM Sans", sans-serif;
   @apply text-gray-500;
 }
+
+/* scrollbar */
+/* WebKit browsers */
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8ac6d1;
+  border-radius: 4px;
+}
+
+/* firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8ac6d1 transparent;
+}
