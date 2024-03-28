@@ -130,7 +130,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className="mt-[-1.2em] flex justify-center">
+            <div className="md:mt-[-1.2em] flex justify-center">
               <img src={massageGraphic} alt="Massage Graphic" />
             </div>
           </motion.div>
