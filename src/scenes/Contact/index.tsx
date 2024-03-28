@@ -94,7 +94,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 </p>
               )}
               <textarea
-                className={inputStyles}
+                className={`${inputStyles} resize-none`}
                 rows={4}
                 cols={50}
                 placeholder="Message"
@@ -118,6 +118,21 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 Submit
               </button>
             </form>
+          </motion.div>
+          <motion.div
+            className=" basis-2/5 md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <div className="mt-[-1.2em] flex justify-center">
+              <img src={massageGraphic} alt="Massage Graphic" />
+            </div>
           </motion.div>
         </div>
       </motion.div>
