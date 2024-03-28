@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# [Wellness Center]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is inspired by a tutorial I followed on [YouTube](https://www.youtube.com/watch?v=I2NNxr3WPDo&ab_channel=EdRoh), which focuses on leveraging the power of
 
-Currently, two official plugins are available:
+- **React Typescript**
+- **Tailwind CSS**
+- **React Anchor Link**
+- **React-Form**
+- **Framer Motion**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Modifications and Personal Touches
 
-## Expanding the ESLint configuration
+While the foundational concepts and techniques were adopted from the tutorial, I've made some modifications to the original project to align with my personal preferences and creative vision. These changes not only reflect my personal style but also allowed me to experiment with the technologies involved, further enhancing my learning experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Getting Started.
 
-- Configure the top-level `parserOptions` property like this:
+Make sure you have Node.js and npm
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    git clone https://github.com/ddimkou/wellness-center.git
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+    cd wellness-center
+
+    npm install
+
+    npm run dev
